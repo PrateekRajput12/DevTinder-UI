@@ -8,6 +8,7 @@ const Login = () => {
     const navigate = useNavigate()
     const [password, setpassword] = useState("Kaju@123")
     const [emailId, setemailId] = useState("kaju@gmail.com")
+    const [error, seterror] = useState("")
     const dispatch = useDispatch()
     const handleLogin = async () => {
         try {
@@ -22,7 +23,8 @@ const Login = () => {
             dispatch(addUser(res.data))
             return navigate("/feed")
         } catch (e) {
-            console.error("Error in logging in:", e.response?.data || e.message);
+            seterror(e?.response?.data || "Something went wrong")
+
         }
     }
     return (
@@ -49,6 +51,7 @@ const Login = () => {
                             </div>
                         </fieldset>
                     </div>
+                    <p className=' text-red-500'>{error}</p>
                     <div className="card-actions justify-center">
                         <button className="btn btn-primary " onClick={handleLogin}>Login</button>
                     </div>
