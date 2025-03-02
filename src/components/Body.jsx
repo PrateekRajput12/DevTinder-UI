@@ -5,10 +5,10 @@ import Footer from './Footer'
 
 const Body = () => {
     return (
-        <div>
+        <div className='w-[100vw] h-[100vh] '>
             <NavBar />
             <Outlet />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
