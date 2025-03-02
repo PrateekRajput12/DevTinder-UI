@@ -3,22 +3,29 @@ import NavBar from './components/NavBar'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import Body from './components/Body'
 import Login from './components/Login'
-import Dummy from './components/Dummy'
+import Feed from './components/Feed'
+import { Provider } from 'react-redux'
+import appStore from './utils/appStore'
+
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<div><Body></Body></div>} >
-          <Route path='/login' element={<Login />} />
-          <Route path='/dummy' element={<Dummy />} />
+    <Provider store={appStore}>
+      <BrowserRouter basename='/'>
+
+        <Routes>
+          <Route path='/' element={<div><Body></Body></div>} >
+            <Route path='/login' element={<Login />} />
+            <Route path='/feed' element={<Feed />} />
 
 
-        </Route>
+          </Route>
 
 
 
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+
+      </BrowserRouter>
+    </Provider>
   )
 }
 
