@@ -1,15 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router'
 
 const NavBar = () => {
 
     const user = useSelector(store => store.user)
-    console.log("USer", user);
-    console.log(user?.photoURL);
+    // console.log("USer", user);
+    // console.log(user?.photoURL);
     return (
         <div className="navbar bg-base-300 shadow-sm">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">DevTinder💀</a>
+                <Link to={'/'} className="btn btn-ghost text-xl">DevTinder💀</Link>
             </div>
             {user && <div className="flex mx-[2rem] gap-4 justify-between items-center ">
                 {/* <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" /> */}
@@ -27,13 +28,13 @@ const NavBar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li>
-                            <a className="justify-between">
+                            <Link to={"/profile"} className="justify-between">
                                 Profile
                                 <span className="badge">New</span>
-                            </a>
+                            </Link>
                         </li>
-                        <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><Link >Settings</Link></li>
+                        <li><Link to={"/login"}>Logout</Link></li>
                     </ul>
                 </div>
             </div>}

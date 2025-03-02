@@ -11,14 +11,14 @@ const Login = () => {
     const dispatch = useDispatch()
     const handleLogin = async () => {
         try {
-            console.log("Sending data:", { emailId, password });
+            // console.log("Sending data:", { emailId, password });
             const res = await axios.post(`${BASE_URL}/login`, {
                 emailId,
                 password
             },
                 { withCredentials: true }
             )
-            console.log("res", res);
+            // console.log("res", res);
             dispatch(addUser(res.data))
             return navigate("/feed")
         } catch (e) {
