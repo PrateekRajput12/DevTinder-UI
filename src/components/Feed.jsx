@@ -32,9 +32,9 @@ const Feed = () => {
         getFeed()
     }, [])
     return (
-        feed && (<div className='flex justify-center items-center mt-[1rem]'>
-            <UserCard user={feed[4]}></UserCard>
-        </div>)
+        <div className='flex justify-center items-center mt-[1rem]'>
+            {feed && <UserCard user={feed[0]}></UserCard>}
+        </div>
     )
 }
 

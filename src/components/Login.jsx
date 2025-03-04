@@ -21,7 +21,7 @@ const Login = () => {
             )
             // console.log("res", res);
             dispatch(addUser(res.data))
-            return navigate("/feed")
+            return navigate("/")
         } catch (e) {
             seterror(e?.response?.data || "Something went wrong")
 

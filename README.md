@@ -29,6 +29,10 @@
 - Get Feed and Add Feed In the Store
 - Add Profile in edit profile show both thing and save editedd profile 
 - use toast 
+- Build the user card on feed
+- Edit profile feature
+- show toast Message on save of profile
+- See all my connections
 
 
 
