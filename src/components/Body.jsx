@@ -22,7 +22,7 @@ const Body = () => {
 
             // console.log(user.data);
 
-            dispatch(addUser(user.data))
+            dispatch(addUser(user?.data))
 
         } catch (e) {
             if (e.status === 401) {

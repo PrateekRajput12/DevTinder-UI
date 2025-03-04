@@ -13,7 +13,7 @@ const Login = () => {
     const handleLogin = async () => {
         try {
             // console.log("Sending data:", { emailId, password });
-            const res = await axios.post(`${BASE_URL}/login`, {
+            const res = await axios.post(BASE_URL + '/login', {
                 emailId,
                 password
             },

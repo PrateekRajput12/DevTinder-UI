@@ -26,6 +26,9 @@
 - Logout feature Done
 
 
+- Get Feed and Add Feed In the Store
+- Add Profile in edit profile show both thing and save editedd profile 
+- use toast 
 
 
 
