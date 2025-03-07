@@ -33,6 +33,7 @@
 - Edit profile feature
 - show toast Message on save of profile
 - See all my connections
+- New Page- See al my connection requests
 
 
 
